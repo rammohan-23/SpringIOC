@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="com.rammohan.spring.injecting.objects.injectingObjects.Person" id="ram">
+	<property name="id" value="150" />
+	<property name="name" value="Ram Mohan Reddy" />
+	<property name="family">
+		<bean class="com.rammohan.spring.injecting.objects.injectingObjects.Family">
+			<constructor-arg name="fatherName" value="Venkata Krishna Reddy Seelam" />
+			<constructor-arg name="motherName" value="Madhavi Seelam"/>
+		</bean>
+	</property>
+	<property name="job">
+		<bean class="com.rammohan.spring.injecting.objects.injectingObjects.Job">
+			<constructor-arg name="teamName" value="BI Services" />
+			<constructor-arg name="managerName" value="Anand"/>
+		</bean>
+	</property>
+</bean>  
+
+<bean class="com.rammohan.spring.injecting.objects.injectingObjects.Person" id="sravan">
+	<property name="id" value="117" />
+	<property name="name" value="Sravan Dwadasi" />
+	<property name="family">
+		<bean class="com.rammohan.spring.injecting.objects.injectingObjects.Family">
+			<constructor-arg name="fatherName" value="Murthy Dwadasi" />
+			<constructor-arg name="motherName" value="Anuradha"/>
+		</bean>
+	</property>
+	<property name="job">
+		<bean class="com.rammohan.spring.injecting.objects.injectingObjects.Job">
+			<constructor-arg name="teamName" value="InforM3" />
+			<constructor-arg name="managerName" value="Sravan"/>
+		</bean>
+	</property>
+</bean>  
+</beans>
