@@ -3,10 +3,10 @@ package com.rammohan.spring.injecting.objects.injectingObjects;
 public class Person {
 	private int id;
 	private String name;
-	
+
 	private Family family;
 	private Job job;
-	
+
 	public void setId(int id) {
 		this.id = id;
 	}
@@ -24,8 +24,8 @@ public class Person {
 	}
 
 	void getPersonDetails() {
-		System.out.println("Name : "+ name);
-		System.out.println("ID : "+ id);
+		System.out.println("Name : " + name);
+		System.out.println("ID : " + id);
 		family.getFamilyDetails();
 		job.getJobInfo();
 		System.out.println("=================================\n=================================");

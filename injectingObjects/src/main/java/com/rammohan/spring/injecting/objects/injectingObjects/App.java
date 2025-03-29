@@ -8,8 +8,11 @@ public class App {
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		Person ram = context.getBean("ram", Person.class);
 		ram.getPersonDetails();
-		
+
 		Person sravan = context.getBean("sravan", Person.class);
 		sravan.getPersonDetails();
+		
+		Person hemanth = context.getBean("hemanth", Person.class);
+		hemanth.getPersonDetails();
 	}
 }
