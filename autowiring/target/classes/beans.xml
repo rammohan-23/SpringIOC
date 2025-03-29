@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="com.rammohan.spring.autowiring.autowiring.Heart" id="heartObject"/>
+
+<!-- if id is same as the variable name in Body class -->
+<!-- <bean class="com.rammohan.spring.autowiring.autowiring.Heart" id="heart"/>
+<bean class="com.rammohan.spring.autowiring.autowiring.Body" id="body" autowire="byName" />
+
+if the class in bean matches with the type in Body
+<bean class="com.rammohan.spring.autowiring.autowiring.Body" id="body" autowire="byType" />
+
+ if Body class has a constructor, then inject -->
+<bean class="com.rammohan.spring.autowiring.autowiring.Body" id="body" autowire="constructor" />
+</beans>
